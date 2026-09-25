@@ -3,7 +3,7 @@
 # pylint: disable=trailing-newlines
 
 
-from main import (
+from tcolorize.main import (
     as_red,
     as_cyan,
     as_yellow,
@@ -21,7 +21,7 @@ from main import (
 )
 
 
-__version__ = 0.1.0
+__version__ = '0.1.0'
 
 __all__ = [
     'as_red',

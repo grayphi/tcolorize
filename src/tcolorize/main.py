@@ -4,7 +4,7 @@
 
 import os
 
-import tput
+from tcolorize import tput
 
 
 _NO_COLOR = False
