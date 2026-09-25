@@ -31,78 +31,111 @@ def get_tput(*args):
         return result.stdout
 
 
+class Fg:
+    LIGHT_GREEN = 2
+    LIGHT_RED = 9
+    LIGHT_GREEN_2 = 10
+    LIGHT_BLUE = 42
+    CYAN = 44
+    YELLOW = 190
+    ORANGE = 202
+    RED = 196
+
+
+class Bg:
+    BLACK = 16
+    DARK_BLACK = 233
+    LIGHT_BLACK = 236
+
+
+class Style:
+    BOLD = "bold"
+    DIM = "dim"
+    UNDERLINE = "smul"
+
+
+class Other:
+    RESET_ALL = "sgr0"
+
+
+fg = Fg()
+bg = Bg()
+style = Style()
+other = Other()
+
+
 @cache
 def fg_red():
-    return get_tput("setaf", "196") or ""
+    return get_tput("setaf", fg.RED) or ""
  
 
 @cache
 def fg_cyan():
-    return get_tput("setaf", "44") or ""
+    return get_tput("setaf", fg.CYAN) or ""
  
 
 @cache
 def fg_yellow():
-    return get_tput("setaf", "190") or ""
+    return get_tput("setaf", fg.YELLOW) or ""
  
 
 @cache
 def fg_orange():
-    return get_tput("setaf", "202") or ""
+    return get_tput("setaf", fg.ORANGE) or ""
  
 
 @cache
 def fg_light_blue():
-    return get_tput("setaf", "42") or ""
+    return get_tput("setaf", fg.LIGHT_BLUE) or ""
  
 
 @cache
 def fg_light_green():
-    return get_tput("setaf", "2") or ""
+    return get_tput("setaf", fg.LIGHT_GREEN) or ""
  
 
 @cache
 def fg_light_green_2():
-    return get_tput("setaf", "10") or ""
+    return get_tput("setaf", fg.LIGHT_GREEN_2) or ""
  
 
 @cache
 def fg_light_red():
-    return get_tput("setaf", "9") or ""
+    return get_tput("setaf", fg.LIGHT_RED) or ""
  
 
 @cache
 def bg_black():
-    return get_tput("setab", "16") or ""
+    return get_tput("setab", bg.BLACK) or ""
  
 
 @cache
 def bg_light_black():
-    return get_tput("setab", "236") or ""
+    return get_tput("setab", bg.LIGHT_BLACK) or ""
  
 
 @cache
 def bg_dark_black():
-    return get_tput("setab", "233") or ""
+    return get_tput("setab", bg.DARK_BLACK) or ""
  
 
 @cache
 def style_bold():
-    return get_tput("bold") or ""
+    return get_tput(style.BOLD) or ""
  
 
 @cache
 def style_dim():
-    return get_tput("dim") or ""
+    return get_tput(style.DIM) or ""
  
 
 @cache
 def style_underline():
-    return get_tput("smul") or ""
+    return get_tput(style.UNDERLINE) or ""
 
 
 @cache
 def reset_all():
-    return get_tput("sgr0") or ""
+    return get_tput(other.RESET_ALL) or ""
 
 
