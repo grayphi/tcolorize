@@ -32,20 +32,20 @@ def get_tput(*args):
 
 
 class Fg:
-    LIGHT_GREEN = 2
-    LIGHT_RED = 9
-    LIGHT_GREEN_2 = 10
-    LIGHT_BLUE = 42
-    CYAN = 44
-    YELLOW = 190
-    ORANGE = 202
-    RED = 196
+    LIGHT_GREEN = "2"
+    LIGHT_RED = "9"
+    LIGHT_GREEN_2 = "10"
+    LIGHT_BLUE = "42"
+    CYAN = "44"
+    YELLOW = "190"
+    ORANGE = "202"
+    RED = "196"
 
 
 class Bg:
-    BLACK = 16
-    DARK_BLACK = 233
-    LIGHT_BLACK = 236
+    BLACK = "16"
+    DARK_BLACK = "233"
+    LIGHT_BLACK = "236"
 
 
 class Style:
