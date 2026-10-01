@@ -1,13 +1,19 @@
 [project]
 name = "tcolorize"
-version = "0.1.0"
+version = "0.1.2"
 description = "Very simple cross-platform colored terminal text in Python"
 readme = "README.md"
 authors = [
     { name = "grayphi", email = "" }
 ]
+
 requires-python = ">=3.14"
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/grayphi/tcolorize"
+Source = "https://github.com/grayphi/tcolorize"
+"Bug Tracker" = "https://github.com/grayphi/tcolorize/issues"
 
 [build-system]
 requires = ["uv_build>=0.12.15,<0.13.0"]
